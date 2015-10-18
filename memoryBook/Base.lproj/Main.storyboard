@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="2315" y="1785"/>
         </scene>
-        <!--Sign Up-->
+        <!--Sign Up Controller-->
         <scene sceneID="8xQ-UC-uPr">
             <objects>
-                <viewController id="FpQ-Qt-7Ry" customClass="signUp" customModule="memoryBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FpQ-Qt-7Ry" customClass="signUpController" customModule="memoryBook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AcG-6N-dGX"/>
                         <viewControllerLayoutGuide type="bottom" id="oJM-PG-4LC"/>

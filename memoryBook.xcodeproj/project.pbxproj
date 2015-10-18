@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AFD454611BD3F3DE0005C64E /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454601BD3F3DE0005C64E /* signUp.swift */; settings = {ASSET_TAGS = (); }; };
 		AFD454631BD3F47A0005C64E /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454621BD3F47A0005C64E /* profileController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFD454651BD3F4AF0005C64E /* settingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454641BD3F4AF0005C64E /* settingsController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454661BD3F4CF0005C64E /* mapController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -16,6 +15,7 @@
 		AFD4546D1BD3F52C0005C64E /* addFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4546C1BD3F52C0005C64E /* addFriendsController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFD4546F1BD3F5580005C64E /* changePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4546E1BD3F5580005C64E /* changePasswordController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFD454711BD3F56F0005C64E /* changeInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454701BD3F56F0005C64E /* changeInfoController.swift */; settings = {ASSET_TAGS = (); }; };
+		AFD454731BD3F7FB0005C64E /* signUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454721BD3F7FB0005C64E /* signUpController.swift */; settings = {ASSET_TAGS = (); }; };
 		AFE7F3161BD142A000FA62C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7F3151BD142A000FA62C2 /* AppDelegate.swift */; };
 		AFE7F3181BD142A000FA62C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7F3171BD142A000FA62C2 /* ViewController.swift */; };
 		AFE7F31B1BD142A000FA62C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE7F3191BD142A000FA62C2 /* Main.storyboard */; };
@@ -43,7 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AFD454601BD3F3DE0005C64E /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = signUp.swift; path = ../signUp.swift; sourceTree = "<group>"; };
 		AFD454621BD3F47A0005C64E /* profileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
 		AFD454641BD3F4AF0005C64E /* settingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsController.swift; sourceTree = "<group>"; };
 		AFD454661BD3F4CF0005C64E /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		AFD4546C1BD3F52C0005C64E /* addFriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFriendsController.swift; sourceTree = "<group>"; };
 		AFD4546E1BD3F5580005C64E /* changePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changePasswordController.swift; sourceTree = "<group>"; };
 		AFD454701BD3F56F0005C64E /* changeInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeInfoController.swift; sourceTree = "<group>"; };
+		AFD454721BD3F7FB0005C64E /* signUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpController.swift; sourceTree = "<group>"; };
 		AFE7F3121BD142A000FA62C2 /* memoryBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoryBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE7F3151BD142A000FA62C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE7F3171BD142A000FA62C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 		AFE7F3091BD142A000FA62C2 = {
 			isa = PBXGroup;
 			children = (
+				AFD454721BD3F7FB0005C64E /* signUpController.swift */,
 				AFE7F3141BD142A000FA62C2 /* memoryBook */,
 				AFE7F3291BD142A000FA62C2 /* memoryBookTests */,
 				AFE7F3341BD142A000FA62C2 /* memoryBookUITests */,
@@ -115,7 +116,6 @@
 		AFE7F3141BD142A000FA62C2 /* memoryBook */ = {
 			isa = PBXGroup;
 			children = (
-				AFD454601BD3F3DE0005C64E /* signUp.swift */,
 				AFE7F3151BD142A000FA62C2 /* AppDelegate.swift */,
 				AFE7F3171BD142A000FA62C2 /* ViewController.swift */,
 				AFE7F3191BD142A000FA62C2 /* Main.storyboard */,
@@ -287,9 +287,9 @@
 				AFE7F3181BD142A000FA62C2 /* ViewController.swift in Sources */,
 				AFD4546F1BD3F5580005C64E /* changePasswordController.swift in Sources */,
 				AFD454691BD3F4EE0005C64E /* deleteAccountController.swift in Sources */,
+				AFD454731BD3F7FB0005C64E /* signUpController.swift in Sources */,
 				AFE7F3161BD142A000FA62C2 /* AppDelegate.swift in Sources */,
 				AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */,
-				AFD454611BD3F3DE0005C64E /* signUp.swift in Sources */,
 				AFD454631BD3F47A0005C64E /* profileController.swift in Sources */,
 				AFD4546D1BD3F52C0005C64E /* addFriendsController.swift in Sources */,
 				AFD454651BD3F4AF0005C64E /* settingsController.swift in Sources */,
