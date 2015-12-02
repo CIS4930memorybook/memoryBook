@@ -36,6 +36,9 @@
 		AF6EA7E91C0EC1AF0044A580 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7E61C0EC1AF0044A580 /* Enums.swift */; };
 		AF6EA7EA1C0EC1AF0044A580 /* signIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7E71C0EC1AF0044A580 /* signIn.swift */; };
 		AF6EA7EB1C0EC1AF0044A580 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7E81C0EC1AF0044A580 /* signUp.swift */; };
+		AF6EA7EF1C0EC85F0044A580 /* memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7EE1C0EC85F0044A580 /* memory.swift */; };
+		AF6EA7F11C0ECEC10044A580 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7F01C0ECEC10044A580 /* UploadImageViewController.swift */; };
+		AF6EA7F31C0ECF700044A580 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7F21C0ECF700044A580 /* UIViewControllerExtension.swift */; };
 		AFD454631BD3F47A0005C64E /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454621BD3F47A0005C64E /* profileController.swift */; };
 		AFD454651BD3F4AF0005C64E /* settingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454641BD3F4AF0005C64E /* settingsController.swift */; };
 		AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454661BD3F4CF0005C64E /* mapController.swift */; };
@@ -101,6 +104,9 @@
 		AF6EA7E61C0EC1AF0044A580 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		AF6EA7E71C0EC1AF0044A580 /* signIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signIn.swift; sourceTree = "<group>"; };
 		AF6EA7E81C0EC1AF0044A580 /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
+		AF6EA7EE1C0EC85F0044A580 /* memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memory.swift; sourceTree = "<group>"; };
+		AF6EA7F01C0ECEC10044A580 /* UploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
+		AF6EA7F21C0ECF700044A580 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		AFD454621BD3F47A0005C64E /* profileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
 		AFD454641BD3F4AF0005C64E /* settingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsController.swift; sourceTree = "<group>"; };
 		AFD454661BD3F4CF0005C64E /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
@@ -207,8 +213,10 @@
 		AF6EA7E31C0EBE510044A580 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF6EA7F21C0ECF700044A580 /* UIViewControllerExtension.swift */,
 				AFE7F3171BD142A000FA62C2 /* ViewController.swift */,
 				AFD454621BD3F47A0005C64E /* profileController.swift */,
+				AF6EA7F01C0ECEC10044A580 /* UploadImageViewController.swift */,
 				AFD454641BD3F4AF0005C64E /* settingsController.swift */,
 				AFD454661BD3F4CF0005C64E /* mapController.swift */,
 				AFD454681BD3F4EE0005C64E /* deleteAccountController.swift */,
@@ -225,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6EA7E61C0EC1AF0044A580 /* Enums.swift */,
+				AF6EA7EE1C0EC85F0044A580 /* memory.swift */,
 				AF6EA7E71C0EC1AF0044A580 /* signIn.swift */,
 				AF6EA7E81C0EC1AF0044A580 /* signUp.swift */,
 			);
@@ -429,7 +438,9 @@
 				AFD454711BD3F56F0005C64E /* changeInfoController.swift in Sources */,
 				AFE7F3181BD142A000FA62C2 /* ViewController.swift in Sources */,
 				AFD4546F1BD3F5580005C64E /* changePasswordController.swift in Sources */,
+				AF6EA7F11C0ECEC10044A580 /* UploadImageViewController.swift in Sources */,
 				AFD454691BD3F4EE0005C64E /* deleteAccountController.swift in Sources */,
+				AF6EA7EF1C0EC85F0044A580 /* memory.swift in Sources */,
 				AF6EA7EB1C0EC1AF0044A580 /* signUp.swift in Sources */,
 				AF6EA7EA1C0EC1AF0044A580 /* signIn.swift in Sources */,
 				AFD454731BD3F7FB0005C64E /* signUpController.swift in Sources */,
@@ -438,6 +449,7 @@
 				AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */,
 				AF63545C1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m in Sources */,
 				AFD454631BD3F47A0005C64E /* profileController.swift in Sources */,
+				AF6EA7F31C0ECF700044A580 /* UIViewControllerExtension.swift in Sources */,
 				AFD4546D1BD3F52C0005C64E /* addFriendsController.swift in Sources */,
 				AFD454651BD3F4AF0005C64E /* settingsController.swift in Sources */,
 			);
