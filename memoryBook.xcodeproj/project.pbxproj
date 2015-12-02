@@ -33,6 +33,9 @@
 		AF6354571BDD6C4A000ED045 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6354561BDD6C4A000ED045 /* libz.tbd */; };
 		AF6354591BDD6C55000ED045 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6354581BDD6C55000ED045 /* libsqlite3.tbd */; };
 		AF63545C1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = AF63545B1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m */; };
+		AF6EA7E91C0EC1AF0044A580 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7E61C0EC1AF0044A580 /* Enums.swift */; };
+		AF6EA7EA1C0EC1AF0044A580 /* signIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7E71C0EC1AF0044A580 /* signIn.swift */; };
+		AF6EA7EB1C0EC1AF0044A580 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EA7E81C0EC1AF0044A580 /* signUp.swift */; };
 		AFD454631BD3F47A0005C64E /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454621BD3F47A0005C64E /* profileController.swift */; };
 		AFD454651BD3F4AF0005C64E /* settingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454641BD3F4AF0005C64E /* settingsController.swift */; };
 		AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD454661BD3F4CF0005C64E /* mapController.swift */; };
@@ -93,8 +96,11 @@
 		AF6354541BDD6C3A000ED045 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AF6354561BDD6C4A000ED045 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AF6354581BDD6C55000ED045 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		AF63545A1BDD6CA6000ED045 /* memoryBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "memoryBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF63545A1BDD6CA6000ED045 /* memoryBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "memoryBook-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		AF63545B1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "memoryBook-Bridging-Header.m"; sourceTree = SOURCE_ROOT; };
+		AF6EA7E61C0EC1AF0044A580 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		AF6EA7E71C0EC1AF0044A580 /* signIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signIn.swift; sourceTree = "<group>"; };
+		AF6EA7E81C0EC1AF0044A580 /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		AFD454621BD3F47A0005C64E /* profileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
 		AFD454641BD3F4AF0005C64E /* settingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsController.swift; sourceTree = "<group>"; };
 		AFD454661BD3F4CF0005C64E /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
@@ -103,7 +109,7 @@
 		AFD4546C1BD3F52C0005C64E /* addFriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFriendsController.swift; sourceTree = "<group>"; };
 		AFD4546E1BD3F5580005C64E /* changePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changePasswordController.swift; sourceTree = "<group>"; };
 		AFD454701BD3F56F0005C64E /* changeInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeInfoController.swift; sourceTree = "<group>"; };
-		AFD454721BD3F7FB0005C64E /* signUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpController.swift; sourceTree = "<group>"; };
+		AFD454721BD3F7FB0005C64E /* signUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = signUpController.swift; path = ../signUpController.swift; sourceTree = "<group>"; };
 		AFE7F3121BD142A000FA62C2 /* memoryBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memoryBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE7F3151BD142A000FA62C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE7F3171BD142A000FA62C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -198,16 +204,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF6EA7E31C0EBE510044A580 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7F3171BD142A000FA62C2 /* ViewController.swift */,
+				AFD454621BD3F47A0005C64E /* profileController.swift */,
+				AFD454641BD3F4AF0005C64E /* settingsController.swift */,
+				AFD454661BD3F4CF0005C64E /* mapController.swift */,
+				AFD454681BD3F4EE0005C64E /* deleteAccountController.swift */,
+				AFD4546A1BD3F5120005C64E /* createMemoryController.swift */,
+				AFD4546C1BD3F52C0005C64E /* addFriendsController.swift */,
+				AFD4546E1BD3F5580005C64E /* changePasswordController.swift */,
+				AFD454701BD3F56F0005C64E /* changeInfoController.swift */,
+				AFD454721BD3F7FB0005C64E /* signUpController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AF6EA7E41C0EBE5F0044A580 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF6EA7E61C0EC1AF0044A580 /* Enums.swift */,
+				AF6EA7E71C0EC1AF0044A580 /* signIn.swift */,
+				AF6EA7E81C0EC1AF0044A580 /* signUp.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AF6EA7E51C0EBE660044A580 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF63545B1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m */,
+				299716FA1C0E58E50073E0B0 /* Assets.xcassets */,
+				AFE7F31E1BD142A000FA62C2 /* LaunchScreen.storyboard */,
+				AF63545A1BDD6CA6000ED045 /* memoryBook-Bridging-Header.h */,
+				AFE7F3211BD142A000FA62C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AFE7F3091BD142A000FA62C2 = {
 			isa = PBXGroup;
 			children = (
 				AF6354371BDD6B76000ED045 /* Frameworks */,
-				AFD454721BD3F7FB0005C64E /* signUpController.swift */,
 				AFE7F3141BD142A000FA62C2 /* memoryBook */,
 				AFE7F3291BD142A000FA62C2 /* memoryBookTests */,
 				AFE7F3341BD142A000FA62C2 /* memoryBookUITests */,
 				AFE7F3131BD142A000FA62C2 /* Products */,
-				AF63545A1BDD6CA6000ED045 /* memoryBook-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,21 +267,11 @@
 		AFE7F3141BD142A000FA62C2 /* memoryBook */ = {
 			isa = PBXGroup;
 			children = (
-				AF63545B1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m */,
 				AFE7F3151BD142A000FA62C2 /* AppDelegate.swift */,
-				AFE7F3171BD142A000FA62C2 /* ViewController.swift */,
 				AFE7F3191BD142A000FA62C2 /* Main.storyboard */,
-				AFD454621BD3F47A0005C64E /* profileController.swift */,
-				AFD454641BD3F4AF0005C64E /* settingsController.swift */,
-				AFD454661BD3F4CF0005C64E /* mapController.swift */,
-				AFD454681BD3F4EE0005C64E /* deleteAccountController.swift */,
-				AFD4546A1BD3F5120005C64E /* createMemoryController.swift */,
-				AFD4546C1BD3F52C0005C64E /* addFriendsController.swift */,
-				AFD4546E1BD3F5580005C64E /* changePasswordController.swift */,
-				AFD454701BD3F56F0005C64E /* changeInfoController.swift */,
-				299716FA1C0E58E50073E0B0 /* Assets.xcassets */,
-				AFE7F31E1BD142A000FA62C2 /* LaunchScreen.storyboard */,
-				AFE7F3211BD142A000FA62C2 /* Info.plist */,
+				AF6EA7E51C0EBE660044A580 /* Supporting Files */,
+				AF6EA7E41C0EBE5F0044A580 /* Models */,
+				AF6EA7E31C0EBE510044A580 /* View Controllers */,
 			);
 			path = memoryBook;
 			sourceTree = "<group>";
@@ -397,8 +430,11 @@
 				AFE7F3181BD142A000FA62C2 /* ViewController.swift in Sources */,
 				AFD4546F1BD3F5580005C64E /* changePasswordController.swift in Sources */,
 				AFD454691BD3F4EE0005C64E /* deleteAccountController.swift in Sources */,
+				AF6EA7EB1C0EC1AF0044A580 /* signUp.swift in Sources */,
+				AF6EA7EA1C0EC1AF0044A580 /* signIn.swift in Sources */,
 				AFD454731BD3F7FB0005C64E /* signUpController.swift in Sources */,
 				AFE7F3161BD142A000FA62C2 /* AppDelegate.swift in Sources */,
+				AF6EA7E91C0EC1AF0044A580 /* Enums.swift in Sources */,
 				AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */,
 				AF63545C1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m in Sources */,
 				AFD454631BD3F47A0005C64E /* profileController.swift in Sources */,
