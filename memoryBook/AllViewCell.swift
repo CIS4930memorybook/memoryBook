@@ -1,21 +1,18 @@
 //
-//  MemoryViewCell.swift
+//  AllViewCell.swift
 //  memoryBook
 //
 //  
 //  Copyright © 2015 Cody Miller. All rights reserved.
 //
 
+
 import UIKit
 import Parse
 
-
-
-class MemoryViewCell: UITableViewCell {
+class AllViewCell: UITableViewCell {
     
-    @IBOutlet weak var TheImage: UIImageView!
-    @IBOutlet weak var TheDesc: UILabel!
-    
+    @IBOutlet weak var Usersname: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +24,5 @@ class MemoryViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
     
-    
-
 }

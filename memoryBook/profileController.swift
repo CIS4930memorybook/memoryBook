@@ -21,11 +21,14 @@ class profileController: UIViewController, UITableViewDelegate {
     //@IBOutlet weak var tableView: UITableView!
     //var images = [PFFile]()
     
+    @IBOutlet weak var friendTable: UITableView!
     @IBOutlet weak var profileMemoryTable: UITableView!
-    
     
     var imageFiles = [PFFile]()
     var descriptions = [String]()
+    
+    var friends = [String]()
+    var selectedUser: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,29 @@ class profileController: UIViewController, UITableViewDelegate {
             }
         }
         //query.findObjectsInBackgroundWithTarget(AnyObject?, selector: <#T##Selector#>)
+        
+        let query2 = PFQuery(className: "friends")
+        query2.orderByDescending("createdAt")
+        query2.whereKey("befriender", equalTo: (PFUser.currentUser())!)
+        query2.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                print("Gotem")
+                
+                for image in objects! {
+                    self.friends.append(image["befriended"] as! String)
+                }
+                
+                self.friendTable.reloadData()
+                print(self.friends)
+            }
+            else {
+                
+                print(error)
+            }
+        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,36 +88,57 @@ class profileController: UIViewController, UITableViewDelegate {
     
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return imageFiles.count
+        if(tableView == self.profileMemoryTable){
+            return imageFiles.count
+        }
+        else{
+            return friends.count
+        }
         
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let oneCell: MemoryViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MemoryViewCell
-        
-        //text
-        oneCell.TheDesc.text = descriptions[indexPath.row]
-        
-        //image
-        imageFiles[indexPath.row].getDataInBackgroundWithBlock{(imageData: NSData?, error: NSError?) -> Void in
+        if(tableView == self.profileMemoryTable){
             
-            if imageData != nil {
+            
+            
+            let oneCell: MemoryViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MemoryViewCell
+            
+            //text
+            oneCell.TheDesc.text = descriptions[indexPath.row]
+            
+            //image
+            imageFiles[indexPath.row].getDataInBackgroundWithBlock{(imageData: NSData?, error: NSError?) -> Void in
                 
-                print("image displayed")
-                let image = UIImage(data: imageData!)
-                oneCell.TheImage.image = image
-                
+                if imageData != nil {
+                    
+                    print("image displayed")
+                    let image = UIImage(data: imageData!)
+                    oneCell.TheImage.image = image
+                    
+                }
+                else {
+                    
+                    print(error)
+                }
             }
-            else {
-                
-                print(error)
-            }
+            
+            
+            return oneCell
+            
         }
-        
-        
-        return oneCell
-        
+        else{
+            
+            let threeCell: FriendsViewCell = tableView.dequeueReusableCellWithIdentifier("Cell3") as! FriendsViewCell
+            
+            threeCell.friendName.text = friends[indexPath.row]
+            
+            return threeCell
+            
+        }
+
+    
     }
     
     

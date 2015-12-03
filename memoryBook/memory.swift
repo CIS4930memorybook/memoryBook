@@ -2,7 +2,7 @@
 //  memory.swift
 //  memoryBook
 //
-//  Created by Cody Miller on 12/2/15.
+//  
 //  Copyright © 2015 Cody Miller. All rights reserved.
 //
 import Parse
@@ -13,6 +13,7 @@ class memory: PFObject, PFSubclassing {
     @NSManaged var userName: PFUser
     @NSManaged var desc: String?
     @NSManaged var location: PFGeoPoint
+    @NSManaged var un: String?
     
     //1
     class func parseClassName() -> String {
@@ -34,13 +35,14 @@ class memory: PFObject, PFSubclassing {
         return query
     }
     
-    init(imageFile: PFFile, userName: PFUser, desc: String?, location: PFGeoPoint) {
+    init(imageFile: PFFile, userName: PFUser, desc: String?, location: PFGeoPoint, un: String?) {
         super.init()
         
         self.imageFile = imageFile
         self.userName = userName
         self.desc = desc
         self.location = location
+        self.un = un
     }
     
     override init() {

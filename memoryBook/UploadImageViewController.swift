@@ -1,9 +1,9 @@
 //
 //  UploadImageViewController.swift
-//  ParseTutorial
+//  
 //
-//  Created by Ron Kliffer on 3/6/15.
-//  sCopyright (c) 2015 Ron Kliffer. All rights reserved.
+//
+//  sCopyright (c) 2015 . All rights reserved.
 //
 
 import UIKit
@@ -16,11 +16,15 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
   @IBOutlet weak var commentTextField: UITextField!
   @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
    // var locValue: PFGeoPoint
-  var username: String?
+    var username: String?
     var location: PFGeoPoint?
     let locationManager = CLLocationManager()
-var locations: [CLLocation] = []
-  // MARK: - Lifecycle
+    var locations: [CLLocation] = []
+    // MARK: - Lifecycle
+    var names: String?
+
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     locationManager.requestAlwaysAuthorization()
@@ -33,8 +37,7 @@ var locations: [CLLocation] = []
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
     }
-    
-    // Do any additional setup after loading the view.
+
   }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -79,14 +82,35 @@ var locations: [CLLocation] = []
         //4
         print("Uploaded: \(percent)%")
     })
-  }
+    }
   
   func saveMemory(file: PFFile)
   {
     var point = PFGeoPoint(latitude:40.0, longitude:-30.0)
     
+    /*
+    let queryun = PFQuery(className: "_User")
+    queryun.orderByDescending("createdAt")
+    queryun.whereKey("userName", equalTo: (PFUser.currentUser())!)
+    queryun.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+        
+        if error == nil {
+            
+            for image in objects! {
+                self.names = (image["username"] as! String)
+            }
+            
+            print(self.names)
+        }
+        else {
+            
+            print(error)
+        }
+    }*/
+
+    
     //1
-    let Memory = memory(imageFile: file, userName: PFUser.currentUser()!, desc: self.commentTextField.text, location:point)    //2
+    let Memory = memory(imageFile: file, userName: PFUser.currentUser()!, desc: self.commentTextField.text, location:point, un: "hey" )    //2
     
     Memory.saveInBackgroundWithBlock{ succeeded, error in
       if succeeded {
@@ -97,9 +121,11 @@ var locations: [CLLocation] = []
         if let errorMessage = error?.userInfo["error"] as? String {
           self.showErrorView(error!)
         }
-      }
+        }
     }
-  }
+        
+    }
+ 
   
 
   

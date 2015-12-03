@@ -1,5 +1,5 @@
 //
-//  MemoryViewCell.swift
+//  FriendsViewCell.swift
 //  memoryBook
 //
 //  
@@ -9,12 +9,10 @@
 import UIKit
 import Parse
 
-
-
-class MemoryViewCell: UITableViewCell {
+class FriendsViewCell: UITableViewCell {
     
-    @IBOutlet weak var TheImage: UIImageView!
-    @IBOutlet weak var TheDesc: UILabel!
+    
+    @IBOutlet weak var friendName: UILabel!
     
     
     override func awakeFromNib() {
@@ -28,7 +26,5 @@ class MemoryViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    
-    
 
 }
