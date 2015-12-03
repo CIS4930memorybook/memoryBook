@@ -24,13 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: "PTSfAZscyx7Dq2hLVNQ01Mtlkz4kkuQb6kAKdiIJ")
         
         // [Optional] Track statistics around application opens.
-        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-    }
-        return true
+                return true
     }
 
     func applicationWillResignActive(application: UIApplication) {

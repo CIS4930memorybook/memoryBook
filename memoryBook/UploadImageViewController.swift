@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import CoreLocation
 
-class UploadImageViewController: UIViewController, CLLocationManagerDelegate {
+class UploadImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate {
   
   @IBOutlet weak var imageToUpload: UIImageView!
   @IBOutlet weak var commentTextField: UITextField!
@@ -62,7 +62,7 @@ var locations: [CLLocation] = []
     loadingSpinner.startAnimating()
     
     //TODO: Upload a new picture
-    let pictureData = UIImagePNGRepresentation(imageToUpload.image!)
+    let pictureData = UIImageJPEGRepresentation(imageToUpload.image!,1)
     
     //1
     let file = PFFile(name: "imageFile", data: pictureData!)
@@ -70,6 +70,7 @@ var locations: [CLLocation] = []
       if succeeded {
         //2
         self.saveMemory(file!)
+        self.performSegueWithIdentifier("UploadtoProfile", sender: self)
       } else if let error = error {
         //3
         self.showErrorView(error)
@@ -100,13 +101,11 @@ var locations: [CLLocation] = []
     }
   }
   
-}
 
-extension UploadImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-  func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-    //Place the image in the imageview
-    imageToUpload.image = image
-    picker.dismissViewControllerAnimated(true, completion: nil)
-  }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        imageToUpload.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 }

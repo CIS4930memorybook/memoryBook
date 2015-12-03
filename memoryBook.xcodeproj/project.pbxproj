@@ -15,6 +15,7 @@
 		299717071C0E5DB10073E0B0 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299717001C0E5DB10073E0B0 /* ParseFacebookUtilsV4.framework */; };
 		299717081C0E5DB10073E0B0 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299717011C0E5DB10073E0B0 /* ParseTwitterUtils.framework */; };
 		299717091C0E5DB10073E0B0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299717021C0E5DB10073E0B0 /* ParseUI.framework */; };
+		34E27A701C0FF794002B24E6 /* MemoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E27A6F1C0FF794002B24E6 /* MemoryViewCell.swift */; };
 		AF63543F1BDD6BCA000ED045 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6354381BDD6BC9000ED045 /* Bolts.framework */; };
 		AF6354401BDD6BCA000ED045 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6354391BDD6BC9000ED045 /* Parse.framework */; };
 		AF6354411BDD6BCA000ED045 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF63543A1BDD6BC9000ED045 /* ParseCrashReporting.framework */; };
@@ -82,6 +83,7 @@
 		299717001C0E5DB10073E0B0 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		299717011C0E5DB10073E0B0 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		299717021C0E5DB10073E0B0 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		34E27A6F1C0FF794002B24E6 /* MemoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewCell.swift; sourceTree = "<group>"; };
 		AF6354381BDD6BC9000ED045 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		AF6354391BDD6BC9000ED045 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		AF63543A1BDD6BC9000ED045 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				AFE7F3151BD142A000FA62C2 /* AppDelegate.swift */,
 				AFE7F3191BD142A000FA62C2 /* Main.storyboard */,
+				34E27A6F1C0FF794002B24E6 /* MemoryViewCell.swift */,
 				AF6EA7E51C0EBE660044A580 /* Supporting Files */,
 				AF6EA7E41C0EBE5F0044A580 /* Models */,
 				AF6EA7E31C0EBE510044A580 /* View Controllers */,
@@ -447,6 +450,7 @@
 				AFE7F3161BD142A000FA62C2 /* AppDelegate.swift in Sources */,
 				AF6EA7E91C0EC1AF0044A580 /* Enums.swift in Sources */,
 				AFD454671BD3F4CF0005C64E /* mapController.swift in Sources */,
+				34E27A701C0FF794002B24E6 /* MemoryViewCell.swift in Sources */,
 				AF63545C1BDD6CA6000ED045 /* memoryBook-Bridging-Header.m in Sources */,
 				AFD454631BD3F47A0005C64E /* profileController.swift in Sources */,
 				AF6EA7F31C0ECF700044A580 /* UIViewControllerExtension.swift in Sources */,
