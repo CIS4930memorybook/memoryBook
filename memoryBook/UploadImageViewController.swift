@@ -17,29 +17,44 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
   @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
    // var locValue: PFGeoPoint
   var username: String?
-    var location: PFGeoPoint?
+    
     let locationManager = CLLocationManager()
 var locations: [CLLocation] = []
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    locationManager.requestAlwaysAuthorization()
+    super.viewDidLoad()
     
-    // For use in foreground
-    locationManager.requestWhenInUseAuthorization()
-   
-    if CLLocationManager.locationServicesEnabled() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.startUpdatingLocation()
-    }
+    self.locationManager.delegate = self
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    self.locationManager.requestWhenInUseAuthorization()
+    self.locationManager.startUpdatingLocation()
     
     // Do any additional setup after loading the view.
   }
+    var latitude: Double!
+    var longitude: Double!
+    var location: CLLocation!
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+         location = locations.last
+        
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+         latitude = location!.coordinate.latitude
+         longitude = location!.coordinate.longitude
+        print(latitude)
+        print(longitude)
+        
+        //let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        
+        //self.mapView.setRegion(region, animated: true)
+        
+        self.locationManager.stopUpdatingLocation()
+    }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print("Errors: " + error.localizedDescription)
     }
   
   // MARK: - Actions
@@ -51,7 +66,6 @@ var locations: [CLLocation] = []
     presentViewController(imagePicker, animated: true, completion: nil)
   }
   
-
   
   @IBAction func sendPressed(sender: AnyObject) {
     commentTextField.resignFirstResponder()
@@ -83,8 +97,9 @@ var locations: [CLLocation] = []
   
   func saveMemory(file: PFFile)
   {
-    var point = PFGeoPoint(latitude:40.0, longitude:-30.0)
     
+    var point = PFGeoPoint(latitude:location!.coordinate.latitude, longitude:location!.coordinate.longitude)
+
     //1
     let Memory = memory(imageFile: file, userName: PFUser.currentUser()!, desc: self.commentTextField.text, location:point)    //2
     
