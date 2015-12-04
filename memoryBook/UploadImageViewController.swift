@@ -16,8 +16,13 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
   @IBOutlet weak var commentTextField: UITextField!
   @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
    // var locValue: PFGeoPoint
+<<<<<<< HEAD
     var username: String?
     var location: PFGeoPoint?
+=======
+  var username: String?
+    
+>>>>>>> 669764ddb1c8dd718b42614249a9de24fa63a117
     let locationManager = CLLocationManager()
     var locations: [CLLocation] = []
     // MARK: - Lifecycle
@@ -27,8 +32,9 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    locationManager.requestAlwaysAuthorization()
+    super.viewDidLoad()
     
+<<<<<<< HEAD
     // For use in foreground
     locationManager.requestWhenInUseAuthorization()
    
@@ -38,11 +44,38 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
         locationManager.startUpdatingLocation()
     }
 
-  }
+=======
+    self.locationManager.delegate = self
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    self.locationManager.requestWhenInUseAuthorization()
+    self.locationManager.startUpdatingLocation()
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    // Do any additional setup after loading the view.
+>>>>>>> 669764ddb1c8dd718b42614249a9de24fa63a117
+  }
+    var latitude: Double!
+    var longitude: Double!
+    var location: CLLocation!
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+         location = locations.last
+        
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+         latitude = location!.coordinate.latitude
+         longitude = location!.coordinate.longitude
+        print(latitude)
+        print(longitude)
+        
+        //let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        
+        //self.mapView.setRegion(region, animated: true)
+        
+        self.locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print("Errors: " + error.localizedDescription)
     }
   
   // MARK: - Actions
@@ -54,7 +87,6 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     presentViewController(imagePicker, animated: true, completion: nil)
   }
   
-
   
   @IBAction func sendPressed(sender: AnyObject) {
     commentTextField.resignFirstResponder()
@@ -86,8 +118,8 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
   
   func saveMemory(file: PFFile)
   {
-    var point = PFGeoPoint(latitude:40.0, longitude:-30.0)
     
+<<<<<<< HEAD
     /*
     let queryun = PFQuery(className: "_User")
     queryun.orderByDescending("createdAt")
@@ -109,6 +141,10 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     }*/
 
     
+=======
+    var point = PFGeoPoint(latitude:location!.coordinate.latitude, longitude:location!.coordinate.longitude)
+
+>>>>>>> 669764ddb1c8dd718b42614249a9de24fa63a117
     //1
     let Memory = memory(imageFile: file, userName: PFUser.currentUser()!, desc: self.commentTextField.text, location:point, un: "hey" )    //2
     

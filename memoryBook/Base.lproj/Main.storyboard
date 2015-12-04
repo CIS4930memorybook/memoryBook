@@ -394,6 +394,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
+=======
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UOP-3G-hn0">
+                                <rect key="frame" x="340" y="216" width="240" height="288"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="i37-0g-1DF">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i37-0g-1DF" id="iXl-sX-nIX">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+>>>>>>> 669764ddb1c8dd718b42614249a9de24fa63a117
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgL-uT-9Pb">
                                 <rect key="frame" x="433" y="156" width="48" height="30"/>
                                 <animations/>
@@ -431,15 +451,15 @@
                                         <rect key="frame" x="0.0" y="28" width="223" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZUo-je-00B" id="uqC-83-TK4">
-                                            <rect key="frame" x="0.0" y="0.0" width="223" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="223" height="152.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-1Z-1Vy">
-                                                    <rect key="frame" x="25" y="0.0" width="168" height="94"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="223" height="94"/>
                                                     <animations/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdA-fI-Q0p">
-                                                    <rect key="frame" x="25" y="102" width="168" height="42"/>
+                                                    <rect key="frame" x="8" y="102" width="168" height="42"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -509,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIc-vY-bbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="1107"/>
+            <point key="canvasLocation" x="832" y="1167"/>
         </scene>
         <!--Map-->
         <scene sceneID="moQ-4y-Mhz">
@@ -522,8 +542,22 @@
                     <view key="view" contentMode="scaleToFill" id="I78-Ez-qEJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BF0-9w-nza">
+                                <rect key="frame" x="20" y="28" width="560" height="523"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="Cya-f9-sPI"/>
+                                    <constraint firstAttribute="height" constant="523" id="mG3-3V-Jig"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="BF0-9w-nza" secondAttribute="leading" id="4fR-CB-xDc"/>
+                            <constraint firstItem="BF0-9w-nza" firstAttribute="top" secondItem="KwK-bd-P0Z" secondAttribute="bottom" constant="8" id="gFO-mV-qcd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="earth-usa" id="DxO-bY-cDl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -531,6 +565,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BZ-4B-6Cw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-180" y="1947"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Muu-3G-f8V">
+            <objects>
+                <viewController id="9ud-1L-uAx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ssA-oz-mdp"/>
+                        <viewControllerLayoutGuide type="bottom" id="wN9-2z-XrC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oqg-qC-EWt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CNK-JY-Ych"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gy0-7H-ztT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="1947"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NyP-er-zPc">
@@ -740,8 +795,8 @@
         <image name="earth-usa" width="10" height="10"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9xj-0i-hnP"/>
         <segue reference="ddq-Br-Xqv"/>
+        <segue reference="g0X-UI-N8l"/>
         <segue reference="Ax0-R6-o6N"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,9 +34,12 @@ class profileController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        
+        
         let query = PFQuery(className: "memory")
         query.orderByDescending("createdAt")
-        query.whereKey("userName", equalTo: (PFUser.currentUser())!)
+        //query.whereKey("userName", equalTo: (PFUser.currentUser())!)
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
